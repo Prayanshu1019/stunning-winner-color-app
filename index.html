@@ -33,7 +33,7 @@ github: prayanshu1019
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Color List</a>
+            <a class="nav-link" href="#">colors List</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">My colors</a>
@@ -46,9 +46,16 @@ github: prayanshu1019
     </div>
   </nav>
 
-  <main>
-    <h2>Color I like</h2>
-    <ul Style="background-color:#4DB6AC">
+  <main class="m-2 p-2">
+    <h2>Colors I like</h2>
+    <div class="mb-3">
+
+<button id="btnLoadColors" class="btn btn-outline-primary">load colors</button>
+
+<button id="btnClearColors" class="btn btn-outline-primary">clear colors</button>
+
+<ul id="colorList" class="list-group"></ul>   
+<ul Style="background-color:#4DB6AC">
       <li><i>Red</li></i>
       <li>Green</li>
       <li>Blue</li>
@@ -56,7 +63,7 @@ github: prayanshu1019
       <li>Black</li>
     </ul>
 
-    Here is my color list!
+    Here is my Colors list!
   </main>
 
   <footer class="footer bg-body-tertiary text-center text-lg-start fixed-bottom">

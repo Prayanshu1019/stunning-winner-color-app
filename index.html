@@ -9,10 +9,20 @@ github: prayanshu1019
   <meta charset="UTF-8">
   <title>Prayanshu&#39;s-color-app</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
-<link rel="stylesheet" href="styles/style.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+  <!-- <link rel="stylesheet" href="styles/style.css"> -->
 
+  <style>
+    body {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="36" height="72" viewBox="0 0 36 72"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.4"%3E%3Cpath d="M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+  background-color: aquamarine;
+  margin-bottom: 60px; 
+}
+  </style>
 </head>
+
+<link rel="stylesheet" href="styles/color-style.css">
+
 <body style="background-color: antiquewhite;">
 
  <!--partial:index.partial.html-->
@@ -59,12 +69,17 @@ github: prayanshu1019
 
   <main class="m-5 p-3">
     <h2>COLORS I LIKE THE MOST !</h2>
-    <div class="mb-3">
+    <div class="mb-3">     
 
-<button id="btnLoadColors" class="btn btn-outline-primary">load more colors</button>
+<button id="btnLoadColors" class="btn btn-outline-primary">Load More Colors</button>
 
-<button id="btnClearColors" class="btn btn-outline-primary">clear colors</button>
+<button id="btnClearColors" class="btn btn-outline-primary">Clear Colors</button>
 
+<button id="btnAddSong" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#addSongModal">Add Color</button>
+
+</div>
+
+<div>
 <ul id="colorList" class="list-group"></ul>   
 <ul Style="background-color:#4DB6AC">
   
@@ -72,10 +87,36 @@ github: prayanshu1019
       <li><i><p><span style="color: Red;">Red</span></p></li></i>
       <li><i><p><span style="color: green;">Green</span></p></li></i>
       <li><i><p><span style="color:blue;">Blue</span><p></p></i></li>
-      <li><i><p><span style="color: yellow;">yellow</span></li></i>
+      <li><i><p><span style="color: white;">White</span></li></i>
       <li><i>Black</i></li>
+
+      <!-- Modal -->
+    <div id="addSongModal" class="modal fade" tabindex="-1" aria-labelledby="addSongModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add New Color</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+            <ul class="list-group">
+
+              <li class="input-group w-100">
+                <span class="w-20 input-group-text">Color name</span>
+                <input id="colorAddName" type="text" class="form-control" placeholder="color name">
+              </li>
+              </ul>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="btnSaveColor" type="button" class="btn btn-primary">save color</button>
+              </div>
+      
     
     </ul>
+  </div>
 
     Here is my Colors list!
   </main>
@@ -92,9 +133,13 @@ github: prayanshu1019
 <!-- scripts go here -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.3/jquery-ui.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js'></script><script  src="./script.js"></script>
-</script>
-<script src="scripts/color-script.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js'></script>
+<!-- <script  src="./script.js"></script>
+</script> -->
+
+  <script src="path/to/data.js"></script>
+  <script src="scripts/color-script.js"></script>
+  
 
 </body>
 </html>

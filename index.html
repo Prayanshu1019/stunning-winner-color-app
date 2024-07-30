@@ -4,28 +4,26 @@ version: 1.2 (dev box)
 github: prayanshu1019
 -->
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Prayanshu&#39;s-color-app</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
-  <!-- <link rel="stylesheet" href="styles/style.css"> -->
 
   <style>
     body {
-  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="36" height="72" viewBox="0 0 36 72"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.4"%3E%3Cpath d="M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
-  background-color: aquamarine;
-  margin-bottom: 60px; 
-}
+      background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="36" height="72" viewBox="0 0 36 72"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.4"%3E%3Cpath d="M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+      background-color: aquamarine;
+      margin-bottom: 60px; 
+    }
   </style>
 </head>
 
 <link rel="stylesheet" href="styles/color-style.css">
 
 <body style="background-color: antiquewhite;">
-
- <!--partial:index.partial.html-->
 
 <nav class="">
 
@@ -34,7 +32,7 @@ github: prayanshu1019
       <a class="navbar-brand" href="#">
         <i class="bi bi-palette"></i>
         Prayanshu's color APP</a>
-      <button class=" navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -45,23 +43,14 @@ github: prayanshu1019
           <li class="nav-item">
             <a class="nav-link" href="#">colors List</a>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#">My colors</a>
-          </li> -->
-
           <li class="nav-item">
             <a class="nav-link" href="pages/about.html">about prayanshu</a>
           </li>
-
           <li class="nav-item">
             <a class="nav-link" target="nu" 
-          href="https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fprayanshu1019.github.io%2Fstunning-winner-color-app%2F">
+            href="https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fprayanshu1019.github.io%2Fstunning-winner-color-app%2F">
             check page validity </a>
           </li>
-
-
-            <!--          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Resources</a> 
-        </li> -->
         </ul>
       </div>      
     </div>
@@ -71,26 +60,24 @@ github: prayanshu1019
     <h2>COLORS I LIKE THE MOST !</h2>
     <div class="mb-3">     
 
-<button id="btnLoadColors" class="btn btn-outline-primary">Load More Colors</button>
+      <button id="btnLoadColors" class="btn btn-outline-primary">Load More Colors</button>
+      <button id="btnClearColors" class="btn btn-outline-primary">Clear Colors</button>
+      <button id="btnAddSong" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#addSongModal">Add Color</button>
 
-<button id="btnClearColors" class="btn btn-outline-primary">Clear Colors</button>
+    </div>
 
-<button id="btnAddSong" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#addSongModal">Add Color</button>
+    <div>
+      <ul id="colorList" class="list-group"></ul>   
+      <ul style="background-color:#4DB6AC">
+        <li><i><p><span style="color: Red;">Red</span></p></li></i>
+        <li><i><p><span style="color: green;">Green</span></p></li></i>
+        <li><i><p><span style="color:blue;">Blue</span><p></p></i></li>
+        <li><i><p><span style="color: white;">White</span></li></i>
+        <li><i>Black</i></li>
+      </ul>
+    </div>
 
-</div>
-
-<div>
-<ul id="colorList" class="list-group"></ul>   
-<ul Style="background-color:#4DB6AC">
-  
-
-      <li><i><p><span style="color: Red;">Red</span></p></li></i>
-      <li><i><p><span style="color: green;">Green</span></p></li></i>
-      <li><i><p><span style="color:blue;">Blue</span><p></p></i></li>
-      <li><i><p><span style="color: white;">White</span></li></i>
-      <li><i>Black</i></li>
-
-      <!-- Modal -->
+    <!-- Modal -->
     <div id="addSongModal" class="modal fade" tabindex="-1" aria-labelledby="addSongModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -98,25 +85,21 @@ github: prayanshu1019
             <h5 class="modal-title" id="exampleModalLabel">Add New Color</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-
           <div class="modal-body">
             <ul class="list-group">
-
               <li class="input-group w-100">
                 <span class="w-20 input-group-text">Color name</span>
                 <input id="colorAddName" type="text" class="form-control" placeholder="color name">
               </li>
-              </ul>
-              </div>
-
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button id="btnSaveColor" type="button" class="btn btn-primary">save color</button>
-              </div>
-      
-    
-    </ul>
-  </div>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button id="btnSaveColor" type="button" class="btn btn-primary">save color</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     Here is my Colors list!
   </main>
@@ -125,21 +108,17 @@ github: prayanshu1019
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
       © 2024
-     <!-- <a class="text-body" href="README.markdown" target="readme">readme</a> -->
       <a class="text-body" href="https://github.com/Prayanshu1019" target="github">PT@github</a> | <a href="https://www.color-hex.com/palettes/3123.png" target="_blank">see my wireframe</a>
     </div>
     <!-- Copyright -->
   </footer>
-<!-- scripts go here -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.3/jquery-ui.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js'></script>
-<!-- <script  src="./script.js"></script>
-</script> -->
 
+  <!-- scripts go here -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.3/jquery-ui.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js'></script>
   <script src="path/to/data.js"></script>
   <script src="scripts/color-script.js"></script>
-  
 
 </body>
 </html>
